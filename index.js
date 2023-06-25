@@ -21,11 +21,12 @@ app.use((req, res, next) => {
 })
 
 //Mensagem para acesso geral
-app.get ('/',(req, res) => {    
-  res.status(200);
-  res.send(
-    'Você acessou Exercício 1 - Montagem de uma API RESTful.'
-  );
+app.get ('/',(req, res) => {  
+  let msg = 'Você acessou Exercício 1 - Montagem de uma API RESTful.';   
+  res.status(200).json( { 
+      message: msg,
+  });
+  console.log(msg)
 })
 
 
